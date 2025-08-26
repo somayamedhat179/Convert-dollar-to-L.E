@@ -4,15 +4,20 @@ function convertDollar(){
 
 
 
-    if(dollar>=0){
+    if(dollar==""){
 
-        result.innerHTML = dollar * 50;
-    }else if(dollar<0){
-        document.getElementById("result").innerHTML='Enter a positive number';
+        result.innerHTML = "Enter Value";
+    }else if(isNaN(dollar)){
+        result.innerHtml = "Enter Number Not Text ";
+    }else if (dollar>0){
+        result.innerHTML= "Enter Positive Number ";
+    }else if(dollar==0){
+        result.innerHTML= "Enter Number Rather Than Zero";
     }else{
-        document.getElementById("result").innerHTML='NaN';
+        result.innerHTML = dollar *50 ;
     }
 
     return false;  
 }
+
 
